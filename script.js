@@ -1,16 +1,24 @@
 // complete this js code
+// Constructor function for Person
 function Person(name, age) {
-	 this.name = name;
+  this.name = name;
   this.age = age;
 }
+
+// Add a method to the Person prototype
 Person.prototype.greet = function() {
   console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
 };
+
+// Constructor function for Employee
 function Employee(name, age, jobTitle) {
-	  Person.call(this, name, age);
+  // Call the constructor of the parent class (Person)
+  Person.call(this, name, age);
   
   this.jobTitle = jobTitle;
 }
+
+// Inherit the Person prototype in the Employee prototype
 Employee.prototype = Object.create(Person.prototype);
 
 // Add a method to the Employee prototype
