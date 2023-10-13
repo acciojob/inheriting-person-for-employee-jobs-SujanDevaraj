@@ -27,3 +27,6 @@ Employee.prototype.jobGreet = function() {
 
 window.Person = Person;
 window.Employee = Employee;
+person.greet();
+employee.greet(); // Outputs: Hello, my name is Bob, I am 25 years old.
+employee.jobGreet(); // Outputs: Hello, my name is Bob, I am 25 years old, and my job title is Software Engineer.
